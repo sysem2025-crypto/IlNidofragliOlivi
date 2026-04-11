@@ -56,11 +56,15 @@ body {
 
 .topbar,
 .hero-grid,
+.hero-visual,
 .feature-grid,
 .workflow-grid,
 .dashboard-grid,
 .admin-grid,
-.two-columns {
+.two-columns,
+.image-showcase,
+.editorial-strip,
+.nature-grid {
   display: grid;
   gap: 20px;
 }
@@ -148,6 +152,35 @@ body {
 .hero-grid {
   grid-template-columns: 1.35fr 0.9fr;
   align-items: center;
+}
+
+.hero-visual {
+  gap: 16px;
+}
+
+.hero-photo-frame,
+.showcase-item,
+.editorial-photo,
+.nature-photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: #ddd;
+}
+
+.hero-photo-frame {
+  aspect-ratio: 4 / 4.4;
+}
+
+.hero-photo-frame img,
+.showcase-item img,
+.editorial-photo img,
+.nature-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .hero-copy h2 {
@@ -310,6 +343,19 @@ body {
   line-height: 1.04;
 }
 
+.image-showcase {
+  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  margin-bottom: 24px;
+}
+
+.showcase-item {
+  aspect-ratio: 4 / 3;
+}
+
+.showcase-large {
+  aspect-ratio: 16 / 10;
+}
+
 .feature-grid,
 .workflow-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -328,6 +374,38 @@ body {
 .panel-card,
 .login-panel {
   padding: 22px;
+}
+
+.editorial-strip {
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.editorial-photo {
+  aspect-ratio: 16 / 10;
+}
+
+.editorial-copy h4 {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  line-height: 1.05;
+}
+
+.editorial-copy p {
+  margin: 0;
+  color: rgba(242, 238, 231, 0.78);
+  line-height: 1.7;
+}
+
+.nature-grid {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 24px;
+}
+
+.nature-photo {
+  aspect-ratio: 4 / 3;
 }
 
 .feature-card h4,
@@ -486,8 +564,12 @@ input:focus {
 
 @media (max-width: 980px) {
   .hero-grid,
+  .hero-visual,
   .feature-grid,
   .workflow-grid,
+  .image-showcase,
+  .editorial-strip,
+  .nature-grid,
   .host-grid,
   .zone-grid,
   .dashboard-grid,
@@ -515,8 +597,12 @@ input:focus {
   }
 
   .hero-grid,
+  .hero-visual,
   .feature-grid,
   .workflow-grid,
+  .image-showcase,
+  .editorial-strip,
+  .nature-grid,
   .host-grid,
   .zone-grid,
   .dashboard-grid,
