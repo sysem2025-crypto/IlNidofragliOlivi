@@ -59,6 +59,9 @@ body {
 .hero-visual,
 .feature-grid,
 .workflow-grid,
+.split-preview,
+.booking-grid,
+.admin-overview,
 .dashboard-grid,
 .admin-grid,
 .two-columns,
@@ -343,6 +346,86 @@ body {
   line-height: 1.04;
 }
 
+.split-preview,
+.booking-grid,
+.admin-overview {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.journey-card,
+.booking-card,
+.overview-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.journey-card-dark {
+  background: linear-gradient(135deg, rgba(31, 42, 48, 0.98), rgba(46, 58, 65, 0.98));
+  color: #f2eee7;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.journey-card h4,
+.booking-card h4,
+.overview-card h4 {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.journey-card p,
+.booking-card p,
+.overview-card p,
+.service-list,
+.journey-list {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.journey-card-dark p,
+.journey-card-dark .journey-list {
+  color: rgba(242, 238, 231, 0.8);
+}
+
+.journey-list,
+.service-list {
+  margin: 0 0 18px;
+  padding-left: 18px;
+}
+
+.text-link {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link-light {
+  color: #f2eee7;
+}
+
+.booking-grid {
+  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+}
+
+.booking-card-primary {
+  background: linear-gradient(135deg, rgba(248, 247, 243, 0.98), rgba(232, 227, 217, 0.98));
+}
+
+.booking-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.admin-overview {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
 .image-showcase {
   grid-template-columns: 1.4fr 0.8fr 0.8fr;
   margin-bottom: 24px;
@@ -567,6 +650,9 @@ input:focus {
   .hero-visual,
   .feature-grid,
   .workflow-grid,
+  .split-preview,
+  .booking-grid,
+  .admin-overview,
   .image-showcase,
   .editorial-strip,
   .nature-grid,
@@ -600,6 +686,9 @@ input:focus {
   .hero-visual,
   .feature-grid,
   .workflow-grid,
+  .split-preview,
+  .booking-grid,
+  .admin-overview,
   .image-showcase,
   .editorial-strip,
   .nature-grid,
