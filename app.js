@@ -160,14 +160,14 @@ function updateMetrics() {
   const totalTax = guests.reduce((sum, guest) => sum + computeTax(guest), 0);
   const openPractices = guests.filter((guest) => !guest.practiceCompleted).length;
 
-  counters.guestCount.textContent = guests.length;
-  counters.practiceCount.textContent = openPractices;
-  counters.taxTotal.textContent = euro(totalTax);
-  counters.activeStaysCount.textContent = countActiveStays(guests);
+  if (counters.guestCount) counters.guestCount.textContent = guests.length;
+  if (counters.practiceCount) counters.practiceCount.textContent = openPractices;
+  if (counters.taxTotal) counters.taxTotal.textContent = euro(totalTax);
+  if (counters.activeStaysCount) counters.activeStaysCount.textContent = countActiveStays(guests);
 
-  counters.heroGuestCount.textContent = guests.length;
-  counters.heroPracticeCount.textContent = openPractices;
-  counters.heroTaxTotal.textContent = euro(totalTax);
+  if (counters.heroGuestCount) counters.heroGuestCount.textContent = guests.length;
+  if (counters.heroPracticeCount) counters.heroPracticeCount.textContent = openPractices;
+  if (counters.heroTaxTotal) counters.heroTaxTotal.textContent = euro(totalTax);
 
   renderGuests(guests);
 }
